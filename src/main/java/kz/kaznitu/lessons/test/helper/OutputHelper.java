@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class OutputHelper
 {
-
-    IOutputGenerator outputGenerator;
     @Autowired
+    IOutputGenerator outputGenerator;
+//    @Autowired
     public OutputHelper(IOutputGenerator outputGenerator) {
         this.outputGenerator = outputGenerator;
     }
