@@ -1,12 +1,14 @@
 package kz.kaznitu.lessons.test.helper;
 import kz.kaznitu.lessons.test.interfaces.IOutputGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OutputHelper
 {
     @Autowired
+    @Qualifier("csvOutput")
     IOutputGenerator outputGenerator;
 //    @Autowired
     public OutputHelper(IOutputGenerator outputGenerator) {
