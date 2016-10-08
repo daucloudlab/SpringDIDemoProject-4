@@ -1,6 +1,7 @@
 package kz.kaznitu.lessons.test;
 
 
+import kz.kaznitu.lessons.test.helper.OutputHelper;
 import kz.kaznitu.lessons.test.interfaces.IOutputGenerator;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -11,7 +12,8 @@ public class App {
         ApplicationContext ctx =
                 new ClassPathXmlApplicationContext("applicationContext.xml") ;
 
-        IOutputGenerator output = (IOutputGenerator)ctx.getBean("jsonOutput") ;
+        OutputHelper output = (OutputHelper)ctx.getBean("outputHelper") ;
+
         output.generateOutput();
     }
 }

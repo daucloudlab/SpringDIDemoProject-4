@@ -1,15 +1,14 @@
 package kz.kaznitu.lessons.test.helper;
-
 import kz.kaznitu.lessons.test.interfaces.IOutputGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OutputHelper
 {
     IOutputGenerator outputGenerator;
 
-    public OutputHelper(){
-
-    }
-
+    @Autowired
     public OutputHelper(IOutputGenerator outputGenerator) {
         this.outputGenerator = outputGenerator;
     }
