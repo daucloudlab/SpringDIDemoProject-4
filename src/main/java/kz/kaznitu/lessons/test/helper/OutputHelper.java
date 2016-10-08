@@ -6,12 +6,14 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
 @Component
 public class OutputHelper
 {
-    @Autowired
-    @Qualifier(value = "jsonOutput")
+//    @Resource(name = "jsonOutput")
+        @Autowired
+        @Qualifier("jsonOutput")
     IOutputGenerator outputGenerator;
 
     public OutputHelper(){
